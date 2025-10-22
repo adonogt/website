@@ -3,50 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Embedded Systems Engineer — Contact</title>
+    <title>Gustavo — Contact</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="gear.html">Gear</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Let&apos;s Start a Conversation</h1>
-      <p>
-        I collaborate with teams who value meticulous embedded engineering and a
-        purposeful aesthetic. Share a brief overview of your project, the timeline
-        you have in mind, and how I can help bring clarity to your product.
-      </p>
-      <section aria-labelledby="contact-details">
-        <h2 id="contact-details">Reach Out</h2>
+    <div class="page">
+      <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__home" href="index.html" aria-label="home">•</a>
+          <a href="blog.html">blog</a>
+          <a href="projects.html">projects</a>
+          <a href="gear.html">gear</a>
+          <a href="contact.html" aria-current="page">contact</a>
+        </nav>
+      </header>
+      <main>
+        <h1>contact</h1>
         <p>
-          Send an email to <a href="mailto:hello@embedded.studio">hello@embedded.studio</a> with
-          your goals, technical context, and preferred communication cadence. I aim
-          to respond within two business days.
+          Collaborations with mindful teams are welcome. Tell me about the hardware,
+          firmware, and experience you want to shape.
         </p>
-      </section>
-      <section aria-labelledby="collaboration">
-        <h2 id="collaboration">Collaboration Guidelines</h2>
-        <p>
-          I welcome opportunities that involve firmware architecture, PCB design,
-          or system integration. Early discovery calls focus on understanding the
-          constraints, compliance requirements, and user experience targets.
-        </p>
-      </section>
-    </main>
-    <footer>
-      <p>© <span id="year">2024</span> Embedded Systems Engineer. Crafted with intention.</p>
-    </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        <section aria-labelledby="email">
+          <h2 id="email" class="section-title">email</h2>
+          <p>
+            Write to <a href="mailto:hello@embedded.studio">hello@embedded.studio</a> with
+            project context, timelines, and any constraints that guide the work.
+          </p>
+        </section>
+        <section aria-labelledby="cadence">
+          <h2 id="cadence" class="section-title">cadence</h2>
+          <p>
+            Expect a considered reply within two business days. I prefer focused
+            weekly syncs supported by concise written updates.
+          </p>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p>アドングスターボ © 2025</p>
+      </footer>
+    </div>
   </body>
 </html>

@@ -3,70 +3,66 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Embedded Systems Engineer — Gear</title>
+    <title>Gustavo — Gear</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="gear.html">Gear</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Tools that Shape My Embedded Practice</h1>
-      <p>
-        Every item on my desk and in my toolkit serves a precise purpose. The
-        following selections keep my embedded systems work measured, reliable, and
-        comfortable.
-      </p>
-      <section aria-labelledby="desk-setup">
-        <h2 id="desk-setup">Desk</h2>
-        <ul>
-          <li><strong>Keyboard</strong> — GMK67 with Cherry MX Grey switches and Red Samurai keycaps</li>
-          <li><strong>Pointing device</strong> — Logitech MX Ergo trackball</li>
-          <li><strong>Laptop</strong> — ThinkPad T14 Gen 2</li>
-          <li><strong>Display</strong> — Dell P2425D monitor</li>
-          <li><strong>In-ear monitors</strong> — Moondrop Chu 2</li>
-          <li><strong>Desk</strong> — Kappesberg Frame Munique 150&nbsp;cm</li>
-        </ul>
-      </section>
-      <section aria-labelledby="stationery">
-        <h2 id="stationery">Stationery</h2>
-        <ul>
-          <li><strong>Mechanical pencil</strong> — Uni Kuru Toga Roulette 0.5&nbsp;mm</li>
-          <li><strong>Pen</strong> — Mitsubishi Uni-ball One in blue</li>
-          <li><strong>Notebook</strong> — Kokuyo Campus</li>
-        </ul>
-      </section>
-      <section aria-labelledby="software">
-        <h2 id="software">Software &amp; Development Flow</h2>
-        <ul>
-          <li><strong>PCB design</strong> — KiCad for open projects and Altium Designer for collaborative work</li>
-          <li><strong>Editors</strong> — Neovim for focused coding and Doom Emacs for literate workflows</li>
-          <li><strong>Scheduling</strong> — TimeTree to align project timelines</li>
-          <li><strong>Security</strong> — Bitwarden to keep credentials safe across teams</li>
-        </ul>
-      </section>
-      <section aria-labelledby="extras">
-        <h2 id="extras">Rhythm &amp; Well-being</h2>
-        <ul>
-          <li><strong>Task cadence</strong> — Pomodoro-inspired intervals to balance deep work and reviews</li>
-          <li><strong>Reference library</strong> — Carefully curated datasheets and notebooks for repeatable builds</li>
-          <li><strong>Listening</strong> — Ambient and instrumental playlists that maintain flow without distraction</li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>© <span id="year">2024</span> Embedded Systems Engineer. Crafted with intention.</p>
-    </footer>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <div class="page">
+      <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+          <a class="site-nav__home" href="index.html" aria-label="home">•</a>
+          <a href="blog.html">blog</a>
+          <a href="projects.html">projects</a>
+          <a href="gear.html" aria-current="page">gear</a>
+          <a href="contact.html">contact</a>
+        </nav>
+      </header>
+      <main>
+        <h1>gear</h1>
+        <p>
+          Every object here keeps my embedded workflow calm, precise, and ready for
+          deep focus.
+        </p>
+        <section aria-labelledby="desk-setup">
+          <h2 id="desk-setup" class="section-title">desk</h2>
+          <ul>
+            <li>keyboard — GMK67, Cherry MX Grey switches, Red Samurai keycaps</li>
+            <li>mouse — Logitech MX Ergo trackball</li>
+            <li>laptop — ThinkPad T14 Gen&nbsp;2</li>
+            <li>monitor — Dell P2425D</li>
+            <li>iem — Moondrop Chu&nbsp;2</li>
+            <li>desk — Kappesberg Frame Munique 150&nbsp;cm</li>
+          </ul>
+        </section>
+        <section aria-labelledby="stationery">
+          <h2 id="stationery" class="section-title">stationery</h2>
+          <ul>
+            <li>mechanical pencil — Uni Kuru Toga Roulette 0.5&nbsp;mm</li>
+            <li>pen — Mitsubishi Uni-ball One, blue ink</li>
+            <li>notebook — Kokuyo Campus</li>
+          </ul>
+        </section>
+        <section aria-labelledby="software">
+          <h2 id="software" class="section-title">software</h2>
+          <ul>
+            <li>pcb design — KiCad and Altium Designer</li>
+            <li>editors — Neovim and Doom Emacs</li>
+            <li>planning — TimeTree</li>
+            <li>security — Bitwarden</li>
+          </ul>
+        </section>
+        <section aria-labelledby="rhythm">
+          <h2 id="rhythm" class="section-title">habits</h2>
+          <ul>
+            <li>deep work — measured blocks with deliberate breaks</li>
+            <li>references — annotated datasheets and notebooks</li>
+            <li>listening — ambient and instrumental playlists</li>
+          </ul>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p>アドングスターボ © 2025</p>
+      </footer>
+    </div>
   </body>
 </html>
