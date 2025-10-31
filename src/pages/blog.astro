@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const fmt = (d: Date) => new Intl.DateTimeFormat("en-CA").format(d);
+---
+<Base title="blog">
+  <h1 class="page-title">blog</h1>
+  <div class="blog-list">
+    {posts.map((p) => (
+      <a class="blog-item" href={`/blog/${p.slug}/`}>
+        <h3>{p.data.title}</h3>
+        <span class="blog-date">{fmt(p.data.date)}</span>
+        <p class="blog-briefing">{p.data.briefing ?? p.data.description ?? ""}</p>
+      </a>
+    ))}
+  </div>
+</Base>

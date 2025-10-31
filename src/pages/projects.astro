@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const items = (await getCollection("projects"))
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+const fmt = (d: Date) => new Intl.DateTimeFormat("en-CA").format(d);
+---
+<Base title="projects">
+  <h1 class="page-title">projects</h1>
+
+  <div class="projects-gallery">
+    {items.map((p) => (
+      <div class="project-item">
+        <a href={`/projects/${p.slug}/`} class="project-card">
+          <img src={p.data.cover} alt={p.data.title} />
+        </a>
+        <div class="project-info">
+          <h3>{p.data.title.toLowerCase()}</h3>
+          <p class="project-summary">{p.data.summary.toLowerCase()}</p>
+          <small class="blog-date">{fmt(p.data.date)}</small>
+        </div>
+      </div>
+    ))}
+  </div>
+</Base>

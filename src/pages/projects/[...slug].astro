@@ -1,0 +1,27 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((it) => ({ params: { slug: it.slug }, props: { it } }));
+}
+
+const { it } = Astro.props as { it: import("astro:content").CollectionEntry<"projects"> };
+const { Content, headings } = await it.render();
+const fmt = (d: Date) => new Intl.DateTimeFormat("en-CA").format(d);
+
+// evita título duplicado no markdown
+const dup =
+  headings.length > 0 &&
+  headings[0].depth === 1 &&
+  headings[0].text.trim().toLowerCase() === it.data.title.trim().toLowerCase();
+---
+<Base title={it.data.title.toLowerCase()}>
+  <article class="prose project-page">
+    <h1>{it.data.title.toLowerCase()}</h1>
+    <small class="blog-date">{fmt(it.data.date)}</small>
+    {dup ? <Content headings={headings.slice(1)} /> : <Content />}
+  </article>
+</Base>
+
